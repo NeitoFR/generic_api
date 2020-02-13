@@ -1,0 +1,19 @@
+version: "3.4"
+
+services: 
+  generic_api: 
+    build: .
+    hostname: generic_api
+    container_name: generic_api
+    # restart: always
+    ports: 
+      - 5000
+    volumes: 
+      - ./app:/app
+    stdin_open: true
+
+
+# networks: 
+#     default:
+#         external: 
+#             name: the_network
